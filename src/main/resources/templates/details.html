@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form action="/updateContact" method="post">
+    <input type="hidden" name="id" placeholder="id" th:value="${contact.getId()}">
+    <input type="" name="name" placeholder="name" th:value="${contact.getName()}">
+    <input type="" name="email" placeholder="email" th:value="${contact.getEmail()}">
+    <input type="submit" name="" placeholder="">
+</form>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <form action="/saveContact" method="post">
+        <input type="" name="name" placeholder="name">
+        <input type="email" name="email" placeholder="email">
+        <input type="" name="phone" placeholder="tel">
+        <input type="submit" name="" placeholder="">
+    </form>
+
+    <!--<form action="/saveContact" method="post" th:object="${contact}">-->
+        <!--<input type="text" th:field="${contact.name}" placeholder="">-->
+        <!--<input type="email" th:field="*{email}" placeholder="email">-->
+        <!--<input type="submit" name="" placeholder="">-->
+    <!--</form>-->
+
+
+    <ul th:each="contact : ${contacts}">
+        <li>
+            <a th:href="@{'details-' + ${contact.getId()} }" th:text="${'details of contact'+contact.getId()}"></a>
+        </li>
+    </ul>
+
+</body>
+</html>
